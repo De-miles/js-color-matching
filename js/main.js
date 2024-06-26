@@ -3,6 +3,7 @@ import {
   createTimer,
   getRandomColorPairs,
   hidePlayAgainButton,
+  setBackgroundColor,
   setTimerText,
   showPlayAgainButton,
 } from './utils.js'
@@ -59,6 +60,7 @@ function handleColorClick(liElement) {
   const isMatch = firstColor === secondColor
 
   if (isMatch) {
+    setBackgroundColor(firstColor)
     // checkWin
     const isWin = getInActiveColorList().length === 0
     if (isWin) {
@@ -134,6 +136,7 @@ function resetGame() {
   initColors()
   // start a new game
   startTimer()
+  setBackgroundColor('#DAA520')
 }
 
 function attachEventForPlayAgainButton() {
