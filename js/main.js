@@ -1,4 +1,4 @@
-import { GAME_STATUS } from './constants'
+import { GAME_STATUS } from './constants.js'
 
 // Global variables
 let selections = []
